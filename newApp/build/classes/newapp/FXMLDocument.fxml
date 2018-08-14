@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="567.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newapp.FXMLDocumentController">
+   <children>
+      <VBox layoutX="2.0" layoutY="12.0" prefHeight="567.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MediaView fx:id="mv" cache="true" fitHeight="400.0" fitWidth="700.0" VBox.vgrow="ALWAYS">
+               <effect>
+                  <ColorAdjust brightness="1.0" contrast="0.19" />
+               </effect></MediaView>
+            <Slider fx:id="timeslider" majorTickUnit="10.0" onDragDetected="#handletimeslider" onMouseClicked="#handletimeslider" onMouseDragEntered="#handletimeslider" showTickLabels="true" snapToTicks="true">
+               <padding>
+                  <Insets top="40.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Slider>
+            <HBox prefHeight="100.0" prefWidth="700.0" spacing="10.0">
+               <children>
+                  <Button fx:id="choose" mnemonicParsing="false" onAction="#handlechooseaction" text="Choose" textAlignment="RIGHT" textFill="#4264c8" textOverrun="CENTER_ELLIPSIS" underline="true">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Narrow" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="play" mnemonicParsing="false" onAction="#handleplayaction" text="Play" textFill="#4264c8">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Narrow" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="pause" mnemonicParsing="false" onAction="#handlepauseaction" text="Pause" textFill="#4264c8">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Narrow" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="stop" mnemonicParsing="false" onAction="#handlestopaction" text="Stop" textFill="#4264c8">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Narrow" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="fast" mnemonicParsing="false" onAction="#handlefastaction" text="Fast" textFill="#4264c8">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Narrow" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="ExtraFast" mnemonicParsing="false" onAction="#handleextrafastaction" text="ExtraFast" textFill="#4264c8">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Narrow" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="slow" mnemonicParsing="false" onAction="#handleslowaction" text="Slow" textFill="#4264c8">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Narrow" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="extraslow" mnemonicParsing="false" onAction="#handleextraslowaction" text="ExtraSlow" textFill="#4264c8">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Narrow" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="normal" mnemonicParsing="false" onAction="#handlenormalaction" text="Normal" textFill="#4264c8">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Narrow" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="new1" mnemonicParsing="false" onAction="#handlenew1action" text="New" textFill="#4264c8">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Narrow" size="15.0" />
+                     </font></Button>
+                  <Slider fx:id="volslider" onDragDetected="#handlevolslider" showTickLabels="true" />
+               </children>
+               <padding>
+                  <Insets right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
